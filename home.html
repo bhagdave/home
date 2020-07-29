@@ -39,12 +39,15 @@
 			<h1>This website project</h1>
             <p>For a long time I have wanted to just write the simplest possible website, i.e. going way back to just plain old HTML/CSS and very little in the way of images.  The result is this website which is about as easy to build as I can possibly imagine.</p>
             <p>There is one index.html file that I put together in a miniscule amount of time ( I dont actually recall). It took me longer to setup the Raspberry PI it is running on to act as a webserver.  So now when I want to create a new page I simply copy the index.html file and then change it.</p>
-	    <p>And that is where the first complication comes.  I am lazy but I dont like repeating myself and copy and paste is the worst kind of duplication.  So now I need some way of including portions of the website (like the menu) without having to have the same code in all files.  So now I want to look at Server Side Includes so I can be super lazy.</p>
+	    <p>And that is where the first complication comes.  I am lazy but I dont like repeating myself and copy and paste is the worst kind of duplication.  So now I need some way of including portions of the website (like the menu) without having to have the same code in all files.  So now I want to look at Server Side Includes so I can be super lazy. And that again was just a bit of apache wrangling on the server. Nothing too onerous at all.</p>
 	    <p>And then there is the deployment.  So simple to move files across to a new box.</p>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<!--#config timefmt="%A %B %d, %Y" -->
+		<p><small>Today is <!--#echo var="DATE_LOCAL" --></small>
+		<p><small>This document last modified <!--#flastmod file="home.html" --></small>
 	</body>
 
 </html>
